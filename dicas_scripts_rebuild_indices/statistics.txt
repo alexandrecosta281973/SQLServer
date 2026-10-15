@@ -1,0 +1,4 @@
+EXECUTE [master].[dbo].[IndexOptimize]
+@Databases = 'USER_DATABASES',
+@UpdateStatistics = 'ALL',
+@OnlyModifiedStatistics = 'Y'

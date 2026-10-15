@@ -1,0 +1,10 @@
+EXECUTE [master].[dbo].[IndexOptimize]
+@Databases = 'USER_DATABASES',
+@FragmentationMedium = 'INDEX_REORGANIZE,INDEX_REBUILD_ONLINE,INDEX_REBUILD_OFFLINE',
+@FragmentationHigh = 'INDEX_REBUILD_ONLINE,INDEX_REBUILD_OFFLINE',
+@FragmentationLevel1 = 5,
+@FragmentationLevel2 = 30,
+@MaxDOP = 0,
+@LogToTable = 'Y',
+@UpdateStatistics = 'ALL',
+@OnlyModifiedStatistics = 'Y'
